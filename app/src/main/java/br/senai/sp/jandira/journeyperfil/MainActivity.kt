@@ -21,15 +21,24 @@ import br.senai.sp.jandira.journeyperfil.screens.ProfileScreen
 import kotlinx.coroutines.launch
 import br.senai.sp.jandira.jouneyperfil.ui.theme.JouneyperfilTheme
 import br.senai.sp.jandira.journeyperfil.screens.AppThemeColors.HomeScreen
+import br.senai.sp.jandira.journeyperfil.screens.DrawerResponsiveWrapper
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent{
+        setContent {
             JouneyperfilTheme {
-                AppNavigation()
+                val navController = rememberNavController()
+                var isDarkTheme by remember { mutableStateOf(false) }
+
+                DrawerResponsiveWrapper(
+                    navController = navController,
+                    isDarkTheme = isDarkTheme,
+                    onThemeToggle = { isDarkTheme = !isDarkTheme }
+                )
             }
         }
+
     }
 }
 

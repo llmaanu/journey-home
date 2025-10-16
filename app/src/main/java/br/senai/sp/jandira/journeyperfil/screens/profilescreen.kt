@@ -21,16 +21,14 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
-// --- Definições de Cores ---
+
 
 val PrimaryPurple = Color(0xFF1E1C2B)
 val PurpleDarker = Color(0xFF341E9B)
 val PurpleMedium = Color(0xFF4A3A9D)
 val PurpleLighter = Color(0xFF7A68C2)
 val White = Color.White
-// ---------------------------------------------------------------------
-// MODELO DE DADOS
-// ---------------------------------------------------------------------
+
 data class UserProfileData(
     val nome: String = "Wilton Pereira Sampaio",
     val email: String = "wilton.sampaio@journey.com",
