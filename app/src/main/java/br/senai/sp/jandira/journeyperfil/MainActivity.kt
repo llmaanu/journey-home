@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 import br.senai.sp.jandira.jouneyperfil.ui.theme.JouneyperfilTheme
 import br.senai.sp.jandira.journeyperfil.screens.AppThemeColors.HomeScreen
 import br.senai.sp.jandira.journeyperfil.screens.DrawerResponsiveWrapper
+import br.senai.sp.jandira.journeyperfil.screens.ProfileScreenResponsive
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,7 +79,7 @@ fun AppNavigation() {
             }
 
             composable("profile_screen") {
-                ProfileScreen(
+                ProfileScreenResponsive(
                     navController = navController,
                     isDarkTheme = isDarkTheme
                 )
